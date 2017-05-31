@@ -10,6 +10,22 @@
     <div class="container">
 
         <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+
+                <div th:if="${param.error}" class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+                    <p th:text="#{login.error.message}"/>
+                </div>
+                <div th:if="${param.logout}" class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+                    <p th:text="#{login.logout.success}"/>
+                </div>
+            </div>
+
 
             <div class="col-md-6 col-md-offset-3">
 
@@ -18,7 +34,7 @@
                     <div class="text-center">
 
                         <h1 th:text="#{login.h1.text}"></h1>
-                        <p class="lead" th:text="#{login.p.lead}" />
+                        <p class="lead" th:text="#{login.p.lead}"/>
 
                     </div>
 
@@ -29,17 +45,17 @@
                               method="post">
 
                             <div class="form-group">
-                                <label for="username" th:text="#{login.username.text}" />
-                                <input type="text" id="username" class="form-control" />
+                                <label for="username" th:text="#{login.username.text}"/>
+                                <input type="text" id="username" class="form-control"/>
                             </div>
 
                             <div class="form-group">
-                                <label for="password" th:text="#{login.password.text}" />
-                                <input type="password" id="password" class="form-control" />
+                                <label for="password" th:text="#{login.password.text}"/>
+                                <input type="password" id="password" class="form-control"/>
                             </div>
 
                             <div class="form-group">
-                                <button type="submit" th:text="#{navbar.login.text}" class="btn btn-primary" />
+                                <button type="submit" th:text="#{navbar.login.text}" class="btn btn-primary"/>
                             </div>
 
                         </form>
@@ -47,6 +63,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
 
