@@ -1,6 +1,5 @@
 package com.devopsbuddy.test.integration;
 
-import com.devopsbuddy.DevopsbuddyApplication;
 import com.devopsbuddy.backend.persistence.domain.backend.PasswordResetToken;
 import com.devopsbuddy.backend.persistence.domain.backend.User;
 import com.devopsbuddy.backend.persistence.repositories.PasswordResetTokenRepository;
@@ -13,7 +12,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.time.Clock;
 import java.time.LocalDateTime;
@@ -26,8 +25,10 @@ import java.util.stream.Collectors;
 /**
  * Created by Donald F. Coffin on 6/1/17.
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes = DevopsbuddyApplication.class)
+/**  @RunWith(SpringJUnit4ClassRunner.class)  **/
+/**  @SpringApplicationConfiguration(classes = DevopsbuddyApplication.class)  **/
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class PasswordResetTokenIntegrationTest extends AbstractIntegrationTest {
 
     @Value("${token.expiration.length.minutes}")
@@ -36,8 +37,7 @@ public class PasswordResetTokenIntegrationTest extends AbstractIntegrationTest {
     @Autowired
     private PasswordResetTokenRepository passwordResetTokenRepository;
 
-    @Rule
-    public TestName testName = new TestName();
+    @Rule public TestName testName = new TestName();
 
     @Before
     public void init() {
@@ -141,7 +141,7 @@ public class PasswordResetTokenIntegrationTest extends AbstractIntegrationTest {
 
         PasswordResetToken passwordResetToken = new PasswordResetToken(token, user, now, expirationTimeInMinutes);
         passwordResetTokenRepository.save(passwordResetToken);
-        Assert.assertNull(passwordResetToken.getId());
+        Assert.assertNotNull(passwordResetToken.getId());
         return passwordResetToken;
     }
 }

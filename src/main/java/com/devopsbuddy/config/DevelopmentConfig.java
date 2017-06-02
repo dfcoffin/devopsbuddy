@@ -9,8 +9,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.PropertySource;
 
-import javax.servlet.ServletRegistration;
-
 /**
  * Created by Donald F. Coffin on 5/30/17.
  */

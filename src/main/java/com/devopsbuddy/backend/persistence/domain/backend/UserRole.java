@@ -13,6 +13,9 @@ public class UserRole implements Serializable{
     /** The Serial Version UID for Serializable classes. **/
     private static final long serialVersionUID = 1L;
 
+    /**
+     * Default constructor.
+     */
     public UserRole() {
 
     }

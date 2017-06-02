@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 /**
  * Created by Donald F. Coffin on 6/1/17.
  */
+@Entity
 public class PasswordResetToken implements Serializable {
 
     /** The Serial Version UID for Serializable classes. **/
@@ -28,6 +29,9 @@ public class PasswordResetToken implements Serializable {
     @Column(unique = true)
     private String token;
 
+    /**
+     * FK to User Table
+     */
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User user;

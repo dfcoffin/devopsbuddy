@@ -59,8 +59,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         List<String> activeProfiles = Arrays.asList(env.getActiveProfiles());
 
-        LOG.info("Currently active profile: {}", env.getActiveProfiles());
-
         if (activeProfiles.contains("dev")) {
             http.csrf().disable();
             http.headers().frameOptions().disable();

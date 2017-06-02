@@ -20,7 +20,9 @@ public class Plan implements Serializable {
 
     private String name;
 
-    /** Default constructor **/
+    /**
+     * Default constructor.
+     */
     public Plan() {
 
     }

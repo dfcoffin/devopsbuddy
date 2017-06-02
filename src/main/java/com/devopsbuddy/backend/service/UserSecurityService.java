@@ -23,7 +23,7 @@ public class UserSecurityService implements UserDetailsService {
     private UserRepository userRepository;
 
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userRepository.findByUsername(username);
+        com.devopsbuddy.backend.persistence.domain.backend.User user = userRepository.findByUsername(username);
         if (null == user) {
             LOG.warn("Username {} not found!!", username);
             throw new UsernameNotFoundException("Username " + username + " not found");
