@@ -1,10 +1,5 @@
 package com.devopsbuddy.test.integration;
 
-/**
- * Created by Donald F. Coffin on 6/2/17.
- */
-/**  @RunWith(SpringJUnit4ClassRunner.class)  **/
-
 import com.devopsbuddy.backend.persistence.domain.backend.PasswordResetToken;
 import com.devopsbuddy.backend.persistence.domain.backend.User;
 import com.devopsbuddy.backend.service.PasswordResetTokenService;
@@ -17,6 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+/*
+ * Created by Donald F. Coffin on 6/2/17.
+ */
+/*  @RunWith(SpringJUnit4ClassRunner.class)  */
 /**  @SpringApplicationConfiguration(classes = DevopsbuddyApplication.class)  **/
 @RunWith(SpringRunner.class)
 @SpringBootTest

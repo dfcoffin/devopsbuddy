@@ -22,11 +22,11 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
-/**
+/*
  * Created by Donald F. Coffin on 6/1/17.
  */
-/**  @RunWith(SpringJUnit4ClassRunner.class)  **/
-/**  @SpringApplicationConfiguration(classes = DevopsbuddyApplication.class)  **/
+/*  @RunWith(SpringJUnit4ClassRunner.class)  */
+/*  @SpringApplicationConfiguration(classes = DevopsbuddyApplication.class)  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class PasswordResetTokenIntegrationTest extends AbstractIntegrationTest {
@@ -130,8 +130,8 @@ public class PasswordResetTokenIntegrationTest extends AbstractIntegrationTest {
 
         Set<PasswordResetToken> actualTokens = passwordResetTokenRepository.findAllByUserId(founduser.getId());
         Assert.assertTrue(actualTokens.size() == tokens.size());
-        List<String> tokensAsList = tokens.stream().map(prt -> prt.getToken()).collect(Collectors.toList());
-        List<String> actualTokensAsList = actualTokens.stream().map(prt -> prt.getToken()).collect(Collectors.toList());
+        List<String> tokensAsList = tokens.stream().map(PasswordResetToken::getToken).collect(Collectors.toList());
+        List<String> actualTokensAsList = actualTokens.stream().map(PasswordResetToken::getToken).collect(Collectors.toList());
         Assert.assertEquals(tokensAsList, actualTokensAsList);
     }
 

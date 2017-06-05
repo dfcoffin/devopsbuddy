@@ -18,11 +18,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.Set;
 import java.util.UUID;
 
-/**
+/*
  * Created by Donald F. Coffin on 5/31/17.
  */
-/**  @RunWith(SpringJUnit4ClassRunner.class)  **/
-/**  @SpringApplicationConfiguration(classes = DevopsbuddyApplication.class)  **/
+/*  @RunWith(SpringJUnit4ClassRunner.class)  */
+/*  @SpringApplicationConfiguration(classes = DevopsbuddyApplication.class)  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserRepositoryIntegrationTest extends AbstractIntegrationTest {
