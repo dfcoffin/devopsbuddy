@@ -74,6 +74,17 @@
 			<artifactId>logback-classic</artifactId>
 		</dependency>
 
+		<!-- Thymeleaf Dependencies -->
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf-spring4</artifactId>
+		</dependency>
+
 		<!-- Spring Security -->
 		<dependency>
 			<groupId>org.thymeleaf.extras</groupId>
