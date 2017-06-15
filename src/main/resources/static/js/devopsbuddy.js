@@ -216,6 +216,27 @@ function main() {
                         message: 'The value is not a valid %s phone number'
                     }
                 }
+            },
+            cardNumber: {
+                validator: {
+                    notEmpty: {
+                        message: 'The credit card number is required'
+                    },
+                    creditCard: {
+                        message: 'The credit card number is not valid'
+                    }
+                }
+            },
+            cardCode: {
+                validator: {
+                    notEmpty: {
+                        message: 'The CVV number is required'
+                    },
+                    cardCode: {
+                        creditCardField: 'cardNumber',
+                        message: 'The CVV number is not valid'
+                    }
+                }
             }
         }
     })
